@@ -1,0 +1,8 @@
+C:\Projects\GettinReal\Getting_Real_Console\Getting_Real_Console\bin\Debug\Getting_Real_Console.exe.config
+C:\Projects\GettinReal\Getting_Real_Console\Getting_Real_Console\obj\Debug\Getting_Real_Console.csprojResolveAssemblyReference.cache
+C:\Projects\GettinReal\Getting_Real_Console\Getting_Real_Console\bin\Debug\Getting_Real_Console.exe
+C:\Projects\GettinReal\Getting_Real_Console\Getting_Real_Console\bin\Debug\Getting_Real_Console.pdb
+C:\Projects\GettinReal\Getting_Real_Console\Getting_Real_Console\obj\Debug\Getting_Real_Console.exe
+C:\Projects\GettinReal\Getting_Real_Console\Getting_Real_Console\obj\Debug\Getting_Real_Console.pdb
+C:\Projects\GettinReal\Getting_Real_Console\Getting_Real_Console\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Projects\GettinReal\Getting_Real_Console\Getting_Real_Console\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
