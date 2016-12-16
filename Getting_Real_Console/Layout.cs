@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Data;
+using System.Security.Cryptography;
+using System.Text;
+using System.Text.RegularExpressions;
+
 
 namespace Getting_Real_Console
 {
@@ -57,5 +61,58 @@ namespace Getting_Real_Console
 
             }
         }
+
+        internal void CheckLoginOrCreate(int ReadKey)
+        {
+            
+            Query SQL = new Query();
+            switch (ReadKey)
+            {
+                case 1:
+                    {
+                        Console.WriteLine("Username/Email: ");
+                        string username = Console.ReadLine();
+                        Console.WriteLine("Password: ");
+                        string password = Console.ReadLine();
+                        SQL.LogUserIn(username,password);
+                        
+                        break;
+                    }
+                case 2:
+                    {
+                        Console.WriteLine("Hi, now fill out the information required to account");
+                        Console.WriteLine("Note! Your username will be your email address!");
+                        Console.WriteLine("Firstname: ");
+                        string createName = Console.ReadLine();
+                        Console.WriteLine("Lastname: ");
+                        string createLastName = Console.ReadLine();
+                        Console.WriteLine("Phone Number: ");
+                        string createPhoneNR = Console.ReadLine();
+                        Console.WriteLine("Address: ");
+                        string createAddress = Console.ReadLine();
+                        Console.WriteLine("Email: ");
+                        string createUsername = Console.ReadLine();
+                        Console.WriteLine("Password: ");
+                        string createPassword = Console.ReadLine();
+                        //byte[] createPassword = Encoding.UTF8.GetBytes(Console.ReadLine());
+                        if (createPassword.Length => 8 && Regex.IsMatch(createPassword, @"^[a-zA-Z0-9\_]+$"))
+                        {
+                            SQL.CreateUser(createName, createLastName, createPhoneNR, createAddress, createUsername, createPassword);
+                            CheckLoginOrCreate(1);
+                        } else
+                        {
+                            Console.WriteLine("Password does not match criteria, needs to be at least 8 carachters long and it has to contain numbers!");
+                            Console.WriteLine("Lets try this again");
+                            CheckLoginOrCreate(2);
+                        }
+                        
+                        
+                        break;
+                    }
+                
+            }
+        }
+
+       
     }
 }

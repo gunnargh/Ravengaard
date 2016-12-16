@@ -15,9 +15,12 @@ namespace Getting_Real_Console
         {
             
             Layout print = new Layout();
-            print.GetWelcomeScreen();
+            Console.WriteLine("New to Ravengaard or regular customer?");
+            Console.WriteLine("1. Login");
+            Console.WriteLine("2. Create Account");
             string ReadKey = Console.ReadLine();
-            print.GetProduct(int.Parse(ReadKey));
+            print.CheckLoginOrCreate(int.Parse(ReadKey));
+           
             Console.ReadLine();
             
         }

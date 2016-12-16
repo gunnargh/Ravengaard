@@ -30,5 +30,16 @@ namespace Getting_Real_Console
             SQL.QueryMethod("Rock_Name,Rock_ID", "Rock");
             Assert.AreEqual("Saphire", SQL.ProductName);
         }
+        [TestMethod]
+        public void TestLogin()
+        {
+            Layout print = new Layout();
+            print.CheckLoginOrCreate(2);
+        }
+        public void TestCreateUser()
+        {
+            Layout print = new Layout();
+           ;
+        }
     }
 }
