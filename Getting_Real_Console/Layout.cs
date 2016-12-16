@@ -95,7 +95,7 @@ namespace Getting_Real_Console
                         Console.WriteLine("Password: ");
                         string createPassword = Console.ReadLine();
                         //byte[] createPassword = Encoding.UTF8.GetBytes(Console.ReadLine());
-                        if (createPassword.Length => 8 && Regex.IsMatch(createPassword, @"^[a-zA-Z0-9\_]+$"))
+                        if (createPassword.Length >= 8 && Regex.IsMatch(createPassword, @"^[a-zA-Z0-9\_]+$"))
                         {
                             SQL.CreateUser(createName, createLastName, createPhoneNR, createAddress, createUsername, createPassword);
                             CheckLoginOrCreate(1);
